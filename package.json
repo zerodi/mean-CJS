@@ -26,6 +26,10 @@
     "connect-flash": "~0.1.1",
     "lodash": "~2.4.1",
     "view-helpers": "*",
-    "bower": "*"
+    "bower": "*",
+    "gulp": "~3.5.2",
+    "gulp-coffee": "~1.4.1",
+    "gulp-stylus": "0.0.12",
+    "gulp-jade": "~0.4.1"
   }
 }

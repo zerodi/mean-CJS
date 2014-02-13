@@ -1,4 +1,7 @@
 .idea/
-node_modules
+node_modules/
 .bower-*/
-public/lib
+public/lib/
+public/css/
+public/js/
+public/views/

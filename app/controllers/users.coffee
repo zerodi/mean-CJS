@@ -16,7 +16,7 @@ exports.authCallback = (req, res) ->
 exports.signin = (req, res) ->
   res.render 'users/signin',
     title: 'Signin'
-    message: res.flash 'error'
+    message: req.flash 'error'
 
 ###
   Show sign up form

@@ -1,6 +1,6 @@
 extends layouts/default
 
 append content
-    section(data-ng-view)
+    section(data-ng-view='data-ng-view')
     script(type='text/javascript')
         window.user = {{user|safe}}
