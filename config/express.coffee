@@ -41,7 +41,7 @@ module.exports = (app, passport, db) ->
     app.use flash()
 
     # Dynamic helpers
-    # app.use helpers(config.app.name)
+    app.use helpers(config.app.name)
 
     # User passport session
     app.use passport.initialize()
