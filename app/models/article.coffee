@@ -41,4 +41,4 @@ ArticleSchema.statics.load = (id,cb) ->
   .populate 'user', 'name username'
   .exec cb
 
-  mongoose.model 'Article', ArticleSchema
+mongoose.model 'Article', ArticleSchema

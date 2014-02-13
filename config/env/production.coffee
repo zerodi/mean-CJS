@@ -1,24 +1,24 @@
 module.exports =
-  db: 'mongodb;//localhost/mean'
+  db: 'mongodb://sugar:sweet@troup.mongohq.com:10051/express-coffee'
   app:
     name: 'MEAN - A Modern Stack - Production'
   facebook:
-    clientID: 'APP_ID'
-    clientSecret: 'APP_SECRET'
-    callbackURL: 'http://localhost:3000/auth/facebook/callbacc'
+    clientID: '690513497638459'
+    clientSecret: 'b5629d0c70e9ba8da7edc642ec834ce4'
+    callbackURL: 'http://localhost:3000/auth/facebook/callback'
   twitter:
-    clientID: 'APP_ID'
-    clientSecret: 'APP_SECRET'
-    callbackURL: 'http://localhost:3000/auth/twitter/callbacc'
+    clientID: 'reGt2Go1xZNVb1QIjLrQ'
+    clientSecret: 'aCYDHVARinUHudFAlfPIMjK9QinNZMenhk8KaKWewA4'
+    callbackURL: 'http://localhost:3000/auth/twitter/callback'
   github:
     clientID: 'APP_ID'
     clientSecret: 'APP_SECRET'
-    callbackURL: 'http://localhost:3000/auth/github/callbacc'
+    callbackURL: 'http://localhost:3000/auth/github/callback'
   google:
     clientID: 'APP_ID'
     clientSecret: 'APP_SECRET'
-    callbackURL: 'http://localhost:3000/auth/google/callbacc'
+    callbackURL: 'http://localhost:3000/auth/google/callback'
   linkedin:
     clientID: 'APP_ID'
     clientSecret: 'APP_SECRET'
-    callbackURL: 'http://localhost:3000/auth/linkedin/callbacc'
+    callbackURL: 'http://localhost:3000/auth/linkedin/callback'

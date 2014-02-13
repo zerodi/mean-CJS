@@ -39,10 +39,10 @@ walk models_path
 # Bootstrap passport config
 require('./config/passport') passport
 
-app = express
+app = express()
 
 # Express settings
-require('./config') app, passport, db
+require('./config/express') app, passport, db
 
 # Bootstrap routes
 routes_path = __dirname + '/app/routes'

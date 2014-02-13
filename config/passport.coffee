@@ -41,8 +41,8 @@ module.exports = (passport) ->
 
   # Use twitter strategy
   passport.use new TwitterStrategy
-    consumeKey: config.twitter.clientID
-    consumeSecret: config.twitter.clientSecret
+    consumerKey: config.twitter.clientID
+    consumerSecret: config.twitter.clientSecret
     callbackUrl: config.twitter.callbackURL
   , (token, tokenSecret, profile, done) ->
     User.findOne
@@ -132,14 +132,15 @@ module.exports = (passport) ->
 
   # Use linkedin strategy
   passport.use new LinkedinStrategy
-    consumeKey: config.linkedin.clientID
-    consumeSecret: config.linkedin.clientSecret
+    consumerKey: config.linkedin.clientID
+    consumerSecret: config.linkedin.clientSecret
     callbackUrl: config.linkedin.callbackURL
-    profileFields:
+    profileFields: [
       'id'
       'first-name'
       'last-name'
       'email-address'
+    ]
   , (accessToken, refreshToken, profile, done) ->
     User.findOne
       'linkedin.id_str': profile.id

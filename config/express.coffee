@@ -15,9 +15,9 @@ module.exports = (app, passport, db) ->
   app.use express.logger('dev') if process.env.NODE_ENV is 'development'
 
   # Set views path and template engine
-  app.set 'views', config.root + 'app/views'
+  app.set 'views', __dirname + '/app/views/'
   app.set 'view engine', 'jade'
-
+  console.log config.root
   # Enable jsonp
   app.enable 'jsonp callback'
 
@@ -41,7 +41,7 @@ module.exports = (app, passport, db) ->
     app.use flash()
 
     # Dynamic helpers
-    app.use helpers(config.app.name)
+    # app.use helpers(config.app.name)
 
     # User passport session
     app.use passport.initialize()
@@ -57,7 +57,7 @@ module.exports = (app, passport, db) ->
     # Assume "not found in the error msgs is a 404. This is somewhat
     # silly, but valid, you can do whatever you like, set properties,
     # use instanceof etc.
-    app.use (err, req,res, next) ->
+    app.use (err, req, res, next) ->
       # Treat as 404
       return next() if ~err.message.indexOf('not found')
 

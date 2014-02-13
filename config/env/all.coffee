@@ -1,5 +1,5 @@
 path = require 'path'
-rootPath = path.normalize __dirname + '/../..'
+rootPath = path.normalize(__dirname + '/../..')
 
 module.exports =
   root: rootPath
@@ -9,5 +9,5 @@ module.exports =
 
   # The secret should be a non guessable string that
   # is used to compute a session hash
-  sessionSecret: 'MEAN'
+  sessionSecret: 'MEAN-coffee'
   sessionCollection: 'sessions'

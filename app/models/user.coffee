@@ -3,7 +3,7 @@
 ###
 mongoose = require 'mongoose'
 Schema = mongoose.Schema
-crypro = require 'crypro'
+crypto = require 'crypto'
 
 ###
   User Schema
@@ -88,7 +88,7 @@ UserSchema.pre 'save', (next) ->
   if not validatePresenceOf(@password) and not @provider
     next new Error 'Invalid password'
   else
-    next*()
+    next()
 
 ###
   Methods
@@ -109,7 +109,7 @@ UserSchema.methods =
     @api public
   ###
   makeSalt: ->
-    return crypro
+    return crypto
       .randomBytes 16
       .toString 'base64'
 
@@ -122,7 +122,7 @@ UserSchema.methods =
   encryptPassword: (password) ->
     return '' if not password or not @salt
     salt = new Buffer @salt, 'base64'
-    return crypro
+    return crypto
       .pbkdf2Sync password, salt, 10000, 64
       .toString 'base64'
 
