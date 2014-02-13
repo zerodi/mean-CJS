@@ -11,6 +11,8 @@
     "crypto": "*",
     "express": "*",
     "jade": "*",
+    "stylus": "*",
+    "nib": "*",
     "mongoose": "*",
     "passport": "*",
     "passport-local": "*",

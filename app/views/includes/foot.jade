@@ -11,22 +11,23 @@ script(type='text/javascript', src='/lib/angular-bootstrap/ui-bootstrap-tpls.js'
 script(type='text/javascript', src='/lib/angular-ui-utils/ui-utils.min.js')
 //
    Application Init
-script(type='text/javascript', src='/js/app.js')
-script(type='text/javascript', src='/js/config.js')
-script(type='text/javascript', src='/js/directives.js')
-script(type='text/javascript', src='/js/filters.js')
+script(type='text/javascript', src='http://jashkenas.github.io/coffee-script/extras/coffee-script.js')
+script(type='text/coffeescript', src='/js/app.coffee')
+script(type='text/coffeescript', src='/js/config.coffee')
+script(type='text/coffeescript', src='/js/directives.coffee')
+script(type='text/coffeescript', src='/js/filters.coffee')
 //
    Application Services
-script(type='text/javascript', src='/js/services/global.js')
-script(type='text/javascript', src='/js/services/articles.js')
+script(type='text/coffeescript', src='/js/services/global.coffee')
+script(type='text/coffeescript', src='/js/services/articles.coffee')
 //
    Application Controllers
-script(type='text/javascript', src='/js/controllers/articles.js')
-script(type='text/javascript', src='/js/controllers/index.js')
-script(type='text/javascript', src='/js/controllers/header.js')
-script(type='text/javascript', src='/js/init.js')
+script(type='text/coffeescript', src='/js/controllers/articles.coffee')
+script(type='text/coffeescript', src='/js/controllers/index.coffee')
+script(type='text/coffeescript', src='/js/controllers/header.coffee')
+script(type='text/coffeescript', src='/js/init.coffee')
 
 if (process.env.NODE_ENV == 'development')
     //
         Livereload script rendered
-    script(type='text/javascript', src='http://localhost:35729/livereload.js')
+        script(type='text/javascript', src='http://localhost:35729/livereload.js')

@@ -6,7 +6,8 @@ express = require 'express'
 mongoStore = require('connect-mongo') express
 flash = require 'connect-flash'
 helpers = require 'view-helpers'
-config = './config'
+stylus = require 'stylus'
+config = require './config'
 
 module.exports = (app, passport, db) ->
   app.set 'showStackError', true
@@ -15,9 +16,8 @@ module.exports = (app, passport, db) ->
   app.use express.logger('dev') if process.env.NODE_ENV is 'development'
 
   # Set views path and template engine
-  app.set 'views', __dirname + '/app/views/'
+  app.set 'views', config.root + '/app/views/'
   app.set 'view engine', 'jade'
-  console.log config.root
   # Enable jsonp
   app.enable 'jsonp callback'
 
@@ -52,7 +52,8 @@ module.exports = (app, passport, db) ->
 
     # Setting the fav icon and static folder
     app.use express.favicon()
-    app.use express.static(config.root + 'public')
+    app.use express.static(config.root + '/public')
+    app.use stylus.middleware(config.root + '/public/css')
 
     # Assume "not found in the error msgs is a 404. This is somewhat
     # silly, but valid, you can do whatever you like, set properties,
