@@ -3,7 +3,8 @@ div(data-ng-controller="HeaderController")
         li
             a.navbar-brand(href="/") MEAN - A Modern Stack
         li(data-ng-repeat="item in menu", data-ng-show="global.user", ui-route="/{{item.link}}", ng-class="{active: $uiRoute}")
-            a(href="#!/{{item.link}}") {{item.title}}
+            a(href="#!/{{item.link}}")
+                | {{item.title}}
     ul.navbar-nav.nav.pull-right(data-ng-hide="global.authenticated")
         li
             a(href="signup") Signup
@@ -14,5 +15,6 @@ div(data-ng-controller="HeaderController")
             a.dropdown-toggle(href="#", data-toggle="dropdown")
                 | {{global.user.name}}
                 b.caret
-        li
-            a(href="/signout") Signout
+            ul.dropdown-menu
+                li
+                    a(href="/signout") Signout

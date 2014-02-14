@@ -31,7 +31,7 @@ UserSchema
   .virtual 'password'
   .set (password) ->
       @_password = password
-      @salt = @makesalt()
+      @salt = @makeSalt()
       @hashedPassword = @encryptPassword password
   .get ->
       return @_password

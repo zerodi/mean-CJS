@@ -15,4 +15,5 @@ angular
         ]
 
         $scope.isCollapsed = false
+        return
   ]

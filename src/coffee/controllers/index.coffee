@@ -5,4 +5,5 @@ angular
       'Global'
       ($scope, Global) ->
         $scope.global = Global
+        return
   ]

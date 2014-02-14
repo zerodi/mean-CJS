@@ -37,7 +37,8 @@ exports.signout = (req, res) ->
   Session
 ###
 exports.session = (req, res) ->
-  res.redirect '/'
+  res.redirect "/"
+  return
 
 ###
   Create user
