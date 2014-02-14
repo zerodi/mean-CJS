@@ -12,6 +12,10 @@ config = require './config'
 module.exports = (app, passport, db) ->
   app.set 'showStackError', true
 
+  # Prettify HTML
+  app.locals.pretty = true
+  app.locals.cache = 'memory'
+
   # Only use logger for development environment
   app.use express.logger('dev') if process.env.NODE_ENV is 'development'
 

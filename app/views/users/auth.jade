@@ -14,8 +14,8 @@ block content
             a(href="/auth/linkedin")
                 img(src="/img/icons/linkedin.png")
         .col-md-6
-          - if (message) && (message.lenght)
+          if message && message.length
             .fade.in.alert.alert-error
-                button.close(data-dismiss="alert") x
-                strong {{message}}
-            block auth
+                button.close(data-dismiss="alert") &times;
+                strong #{message}
+          block auth
