@@ -3,8 +3,8 @@
 ###
 should = require 'should'
 mongoose = require 'mongoose'
-User = mongoose.model 'User'
-Article = mongoose.model 'Article'
+User = mongoose.model('User')
+Article = mongoose.model('Article')
 
 user = undefined
 article = undefined

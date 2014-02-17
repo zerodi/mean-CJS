@@ -6,6 +6,8 @@ coffee = require 'gulp-coffee'
 stylus = require 'gulp-stylus'
 jade = require 'gulp-jade'
 nodemon = require 'gulp-nodemon'
+mocha = require 'gulp-mocha'
+karma = require 'gulp-karma'
 
 ###
   Compile Public Coffee
@@ -34,6 +36,18 @@ gulp.task 'jade', ->
     .src './src/jade/**/*'
     .pipe jade(locals: LOCALS).on 'error', console.log
     .pipe gulp.dest './public/views/'
+
+###
+  Run Tests
+###
+gulp.task 'mocha', ->
+  gulp
+    .src './test/mocha/**/*.coffee'
+    .pipe mocha(reporters: 'nyan', compilers: 'coddee:coffee-script/register').on 'error', console.log
+
+gulp.task 'karma', ->
+  gulp
+    .pipe karma(configFile: './test/karma/karma.conf.coffee')
 
 ###
   Main
