@@ -5,6 +5,7 @@ gulp = require 'gulp'
 coffee = require 'gulp-coffee'
 stylus = require 'gulp-stylus'
 jade = require 'gulp-jade'
+nodemon = require 'gulp-nodemon'
 
 ###
   Compile Public Coffee
@@ -35,18 +36,12 @@ gulp.task 'jade', ->
     .pipe gulp.dest './public/views/'
 
 ###
-  Watch changes
-###
-gulp.task 'watch', ->
-  gulp.watch './src/jade/**/*', ['jade']
-  gulp.watch './src/stylus/**/*', ['stylus']
-  gulp.watch './src/coffee/**/*', ['coffee']
-
-###
   Main
 ###
 gulp.task 'default', ->
-  gulp.run 'coffee', 'stylus', 'jade'
+  gulp.run 'coffee'
+  gulp.run 'stylus'
+  gulp.run 'jade'
 
-gulp.task 'watch', ->
-  gulp.run 'coffee', 'stylus', 'jade', 'watch'
+  nodemon
+    script: 'server.coffee'
