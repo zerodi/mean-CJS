@@ -3,8 +3,7 @@
 MEAN is a boilerplate that provides a nice starting point for [MongoDB](http://www.mongodb.org/), [Node.coffee](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. It is designed to give you quick and organized way to start developing of MEAN based web apps with useful modules like mongoose and passport pre-bundled and configured. We mainly try to take care of the connection points between existing popular frameworks and solve common integration problems.
 
 # MEAN Coffee
-It's practically the same MEAN, but with sugar. All code rewrire by Coffescript, all css now in Stylus and I've return Jade (in last versions authors use Swig).
-And I replaced Grunt by Gulp.
+It's practically the same MEAN, but with sugar. All code rewrite by Coffescript, all css now in Stylus and html in Jade (in last versions authors use Swig). Also I replaced Grunt by Gulp.
 
 ## Prerequisites
 * Node.js - Download and Install [Node.js](http://www.nodejs.org/download/). You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm
