@@ -3,8 +3,9 @@
 ###
 should = require 'should'
 mongoose = require 'mongoose'
-User = mongoose.model('User')
-Article = mongoose.model('Article')
+
+User = mongoose.model 'User'
+Article = mongoose.model 'Article'
 
 user = undefined
 article = undefined
@@ -24,10 +25,9 @@ describe '<Unit Test>', ->
           title: 'Article Title'
           content: 'Article Content'
           user: user
-
         done()
         return
-    return
+      return
 
     describe 'Method Save', ->
       it 'should be able to save without problems', (done) ->
@@ -43,7 +43,7 @@ describe '<Unit Test>', ->
           should.exist err
           done()
           return
-
+      return
 
     aftreEach (done) ->
       Article.remove {}
@@ -56,3 +56,5 @@ describe '<Unit Test>', ->
       User.remove().exec()
       done()
       return
+    return
+  return

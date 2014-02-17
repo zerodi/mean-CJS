@@ -43,7 +43,10 @@ gulp.task 'jade', ->
 gulp.task 'mocha', ->
   gulp
     .src './test/mocha/**/*.coffee'
-    .pipe mocha(reporters: 'nyan', compilers: 'coddee:coffee-script/register').on 'error', console.log
+    .pipe mocha(
+        reporters: 'spec'
+
+      ).on 'error', console.log
 
 gulp.task 'karma', ->
   gulp
