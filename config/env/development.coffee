@@ -1,5 +1,5 @@
 module.exports =
-  db: 'mongodb://sugar:sweet@troup.mongohq.com:10051/express-coffee'
+  db: 'mongodb://localhost/coffee-dev'
   app:
     name: 'MEAN - A Modern Stack - Development'
   facebook:
